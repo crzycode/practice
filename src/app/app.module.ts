@@ -14,10 +14,12 @@ import { FileuploadComponent } from './fileupload/fileupload.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    FileuploadComponent,
+    FileuploadComponent
+   
 
     
   ],

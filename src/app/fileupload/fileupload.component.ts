@@ -8,7 +8,7 @@ import { FileUploadService } from '../file-upload.service';
 })
 export class FileuploadComponent implements OnInit {
 loading:boolean = false;
-file!:FileList;
+file!:File[];
   constructor(private fileupload: FileUploadService) { }
 
   ngOnInit(): void {
@@ -20,7 +20,7 @@ file!:FileList;
   }
   onupload(){
    for(var i = 0; i < this.file.length; i++){
- this.fileupload.upload(this.file[i]).subscribe((event:any) =>{
+ this.fileupload.upload(this.file).subscribe((event:any) =>{
 
       if(typeof(event) === "object"){
         this.loading = false;
